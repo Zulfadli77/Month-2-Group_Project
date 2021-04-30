@@ -107,6 +107,47 @@ body {
   transform:rotate(180deg);
 }
 
+/*heading*/
+
+.head{
+  display:none;
+}
+
+.head90{
+  padding-top: 10vh;
+}
+
+
+/* Prayer Times */
+.prayer-container {
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    height:18vh;
+}
+
+.prayer-container{
+    background-image: url(img/pray.jpg);
+    fill:cover;
+}
+
+.prayer_time {
+    font-size: 1.6em;
+    font-weight: 800;
+    text-align: left;
+}
+
+#prayer_clock, #prayer_city, #prayer_date{
+    display:none;
+}
+.prayer-container{
+    font-size: 1.2em;
+    font-weight: 800;
+}
+
+
+
 /*quote*/
 
 .qWrapper{
@@ -255,3 +296,40 @@ background-color:#800080;
     justify-content: center;
   }
 }
+
+@media screen and (max-width:1000px) {
+  #heading{
+    display:flex;
+    justify-content: center;
+  }
+  .head{
+    display:flex;
+  }
+
+  .head90{
+    display:none;
+  }
+}
+
+@media screen and (max-width:800px) {
+
+  #forecast{
+    display:flex;
+    justify-content: center;
+  }
+
+  #forecast h5{
+    font-size: 13px;
+  }
+
+  .display-clock{
+    font-size: 13px;
+  }
+
+  .display-date{
+    font-size: 13px;
+  }
+
+}
+
+@media screen and (max-width:800px) {
