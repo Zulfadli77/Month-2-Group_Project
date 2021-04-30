@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bad+Script&family=Krona+One&family=Rock+Salt&display=swap');
+
+
+body {
+  /*background: url() no-repeat center center fixed;
+  background-size: cover;*/
+  width:100vw;
+  overflow-x: hidden;
+}
+
+
+::-webkit-scrollbar {
+  height: 10px;              /* height of horizontal scrollbar ← You're missing this */
+  width: 10px;               /* width of vertical scrollbar */
+  
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background:  #0944AD;
+  border-radius: 1rem;
+}
+
+#logo img{
+  width:28rem;
+  padding-top:5px;
+}
+
+
+/*digital clock*/
+.display-clock {
+    font-family: 'Orbitron', sans-serif;
+    margin: auto;
+    padding:0;
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 500;
+    color:#ff6045;
+
+}
+
+.display-date {
+    font-family: 'Orbitron', sans-serif;
+    margin:0;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color:#0944AD;
+}
+
+.min {
+    position: absolute;
+}
+
+.max {
+    margin-left: 4rem;
+}
+
+
+/*weather*/
+#forecast{
+  font-family: 'Orbitron', sans-serif;
+  padding:10px;
+  color:#0944AD;
+}
+
+#icon{
+  width:60px;
+  margin:0 10px;
+}
+
+#temp, #weather, #location{
+  color:#ff6045;
+}
+
+#stats{
+  margin-left:21px;
+}
+
+#forecast button{
+  border:0;
+  background-color: transparent;
+  color:#0944AD;
+}
+
+#forecast button i{
+  -moz-transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+#forecast button i:hover{
+  -moz-transform:rotate(450deg);
+  -webkit-transform:rotate(450deg);
+  transform:rotate(450deg);
+}
+
+
+
+
+
+/*quote*/
+
+.qWrapper{
+    border-radius: 10px;
+    text-align: center;
+    background-color: #ff6045;
+    font-family: 'Anton', sans-serif;
+    color:#0944AD;
+    height:18vh;
+    overflow-y: scroll;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+#quote{
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-family: 'Bad Script', cursive;
+    color:#fff;   
+}
+
+#author{
+    text-align: end;
+    padding-right: 30px;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*gt css*/
+#gt{
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100vw;
+  display:flex;
+}
+
+#gt button{
+  width:12.5vw;
+  border:0px;
+  font-weight: bold;
+  color:#fff;
+}
+
+#do1{
+background-color:#ff0000;
+}
+#re{
+background-color:#ffa500;
+}
+#mi{
+background-color:#ffff00;
+}
+#fa{
+background-color:#02c702;
+}
+#sol{
+background-color:#008000;
+}
+#la{
+background-color:#0078ff;
+}
+#ti{
+background-color:#2200ff;
+}
+#do2{
+background-color:#800080;
+}
+
+
+
+
+/*media breakpoint*/
+@media screen and (max-width:1200px) {
+  #logo{
+    display: flex;
+    justify-content: center;
+  }
+}
