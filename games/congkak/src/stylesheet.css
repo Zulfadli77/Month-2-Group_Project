@@ -1,0 +1,96 @@
+body{
+    background-color: #000000;
+}
+a {
+    background-color: #fff;
+    padding: 6px;
+}
+.main-gamegrid {
+    text-align: center;
+    background-color: #000000;
+}
+
+.titlerow {
+    
+    margin-right: auto;
+    margin-left: 10%;
+    color: #ffffff;
+}
+.grid {
+    margin: auto;
+    width: 1200px;
+    height: 500px;
+    background-color: #000;
+}
+
+.score-base {
+    margin-left: auto;
+    margin-right: 45%;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.gamerow {
+    border-radius: 150px;
+    background-color: #69442c;
+    background-image: url("../img/darkwood.jpg");
+    background-size: cover;
+    background-repeat: repeat;
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+.storehouse {
+    border-radius: 150px;
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+    display: inline-block;
+    overflow: hidden;
+    border: 1px solid red;
+    background-color: #fff;
+    line-height: 200px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 100px;
+    transition: all .3s;
+}
+
+.midgrid {
+    min-width: 900px;
+}
+.house {
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    display: inline-block;
+    overflow: hidden;
+    border: 1px solid red;
+    background-color: #fff;
+    line-height: 100px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 50px;
+    transition: all .3s;
+}
+
+.p1house {
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    display: inline-block;
+    overflow: hidden;
+    border: 1px solid red;
+    background-color: #fff;
+    line-height: 100px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 50px;
+    transition: all .3s;
+}
+
+.highscore {
+    color: greenyellow;
+}
+
+#gameState {
+    color: red;
+}

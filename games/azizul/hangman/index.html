@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="style.css">
+
+  <title>Hangman</title>
+</head>
+<body align="center">
+
+
+<div class="container">
+
+<p1 id="time" class="fontdecoration">Guess Answer In </p1>
+
+<label id="seconds" class="fontdecoration">00s</label>
+
+
+<br>
+  <div class="fontdecoration_wrong_guesses">Wrong Guesses: <span id='mistakes'>0</span> of <span id='maxWrong'></span></div>
+  <br>
+
+  <div class="text-center">
+    <img id='hangmanPic' src="./images/0.jpg" height="190" alt="">
+
+    <p class="fontdecoration_guess_numb">Guess The Name Of Popular Computer Brand In 60s</p>
+
+    <p id="wordSpotlight" class="fontdecoration_guesgoes_here">The word to be guessed goes here</p>
+
+    <div id="keyboard" class="fontdecoration_text_you_win"></div>
+
+
+<br>
+    <button class="button_transparent-button" onClick="reset()">Change Words</button>
+    <a href="index.html" class="manual-optin-trigger" data-optin-slug="atefh5rvxazforll"><button class="button_transparent-button">Reset Time</button></a>
+  </div> 
+</div>
+
+
+<script src='./js/hangman.js'></script>
+
+<div hidden>
+  <audio controls loop autoplay>
+    <source src="countdown.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+  </audio>
+  </div>
+
+
+
+</body>
+</html>

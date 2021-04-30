@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root{
+  font-family: 'Press Start 2P', cursive;
+  background-color: black;
+}
+
+a:link {
+  text-decoration: none;
+  color: white;
+}
+
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+
+.backbtn{
+  background-color: #605ee9;
+  
+}
+
+#in {
+  text-align: center;
+  border: 5px solid #d4d65b;
+  width: 520px;
+  border-radius: 20px;
+  padding: 5px;
+  margin-left: 15px;
+  margin-bottom: 30px;
+  animation: inb-flicker 6s linear infinite;
+}
+
+#inh1 {
+  color: #eaeaf0;
+  font-family: 'Raleway';
+  font-size: 20px;
+  letter-spacing: 5px;
+  animation: inh1-flicker 3s linear infinite;
+}
+
+.ins {
+  display: inline;
+  animation: ins-flicker 5s linear infinite;
+}
+
+@keyframes inb-flicker {
+  0% {
+      opacity: 0;
+      box-shadow: 0px 0px 78px 4px #e8e410;
+  }
+
+  2% {
+      opacity: 0.4;
+      box-shadow: 0px 0px 78px 4px #e85f10d0;
+  }
+
+  10% {
+      opacity: .8;
+      box-shadow: 0px 0px 78px 4px #e8e410;
+  }
+
+  25% {
+      opacity: 0.4;
+      box-shadow: 0px 0px 78px 4px #e85f10d0;
+  }
+
+  50% {
+      opacity: .6;
+      box-shadow: 0px 0px 78px 4px #e8e410;
+  }
+
+  65% {
+      opacity: 0.6;
+      box-shadow: 0px 0px 78px 4px #e85f10d0;
+  }
+
+  85% {
+      opacity: .5;
+      box-shadow: 0px 0px 78px 4px #e8e410;
+  }
+
+  100% {
+      opacity: .8;
+      box-shadow: 0px 0px 78px 4px #e85f10;
+  }
+}
+
+@keyframes inh1-flicker {
+  0% {
+      opacity: 0.2;
+      text-shadow: 0px 0px 20px #e810c4;
+  }
+
+  5% {
+      opacity: 0.7;
+      text-shadow: 0px 0px 40px #10e822;
+  }
+
+  15% {
+      opacity: .4;
+      text-shadow: 0px 0px 20px #e810c4;
+  }
+
+  30% {
+      opacity: .6;
+      text-shadow: 0px 0px 40px #10e822;
+  }
+
+  45% {
+      opacity: .3;
+      text-shadow: 0px 0px 20px #e810c4;
+  }
+
+  55% {
+      opacity: .6;
+      text-shadow: 0px 0px 40px #10e822;
+  }
+
+  5% {
+      opacity: 0.2;
+      text-shadow: 0px 0px 20px #e810c4;
+  }
+
+  75% {
+      opacity: 0.9;
+      text-shadow: 0px 0px 40px #10e822;
+  }
+
+  100% {
+      opacity: .4;
+      text-shadow: 0px 0px 20px #e810c4;
+  }
+}
+
+@keyframes ins-flicker {
+  0% {
+      opacity: 0.1;
+      text-shadow: 0 0 50px #10e822;
+  }
+
+  2% {
+      opacity: 0.8;
+      text-shadow: 0 0 50px #e810c4;
+  }
+
+  15% {
+      opacity: .4;
+      text-shadow: 0 0 50px #10e822;
+  }
+
+  25% {
+      opacity: 0.3;
+      text-shadow: 0 0 50px #e810c4;
+  }
+
+  35% {
+      opacity: .6;
+      text-shadow: 0 0 50px #10e822;
+  }
+
+  45% {
+      opacity: .2;
+      text-shadow: 0 0 50px #e810c4;
+  }
+
+  55% {
+      opacity: .7;
+      text-shadow: 0 0 50px #10e822;
+  }
+
+  65% {
+      opacity: .4;
+      text-shadow: 0 0 50px #e810c4;
+  }
+
+  75% {
+      opacity: 0.9;
+      text-shadow: 0 0 50px #10e822;
+  }
+
+  80% {
+      opacity: .5;
+      text-shadow: 0 0 50px #e810c4;
+  }
+
+  100% {
+      opacity: .7;
+      text-shadow: 0 0 50px #10e822;
+  }
+}
+
+.container{
+  width: 1200px;
+  height: 600px;
+  display:contents;
+  justify-content: center;
+  align-items: center;
+}
+
+h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+  color: #d4d65b;
+}
+
+tr{
+  color: white;
+}
+
+td {
+  border-radius: 20px;
+  box-shadow: 10px 10px;
+  height:  100px;
+  width:  100px;
+  text-align:  center;
+  vertical-align:  middle;
+  font-family:  "Comic Sans MS", cursive, sans-serif;
+  font-size:  70px;
+  cursor: pointer;
+}
+
+table {
+  position: relative;
+  left: 50%;
+  margin-left: -175px;
+  top: 30px;
+}
+
+
+.gameOver {
+  display: none;
+  width:  200px;
+  top: 120px;
+  background-color: rgba(205, 133, 63, 0.8);
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-size: 2em; 
+}
+
+.selectSym{
+  display: none;
+  width: 300px;
+  top: 110px;
+  background-color: rgba(184, 96, 8, 0.8);
+  position:fixed;
+  left: 50%;
+  margin-left: -155px;
+  padding-top: 10px;
+  padding-bottom: 50px;
+  text-align: center;
+  border-radius: 20px;
+  color: yellow;
+  font-size: 1.5rem; 
+  text-align: center;
+  margin-top: 260px;
+  box-shadow: 5px 5px rgb(63, 63, 63);
+}
+
+.selectSym button{
+  font-size: 35px;
+  width: 70px;
+  text-align: center;
+  border: none;
+}
+
+p{
+  font-size: 18px;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.selectSym  button:first-of-type {
+  margin-right: 10px;
+  border-radius: 15px;
+}
+.selectSym  button:last-of-type {
+  margin-left: 10px;
+  border-radius: 15px;
+}

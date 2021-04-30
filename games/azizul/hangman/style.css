@@ -1,0 +1,104 @@
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.fontdecoration{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 30px;
+	opacity: 0.50;
+	}
+
+.fontdecoration_wrong_guesses{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    opacity: 0.50;
+    }
+
+.fontdecoration_guess_numb{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    opacity: 0.50;
+    }   
+
+    .button_transparent-button{
+        font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        color:rgb(255, 255, 255);
+        padding: 10px 90px !important;
+        border-radius: 5px;
+        margin: 0px 0px 0px 20px;
+        background-color: #030303;
+        border: 3px solid #0a0a0a;
+        border-radius: 5px;
+        transition: 0.8s;
+      }
+      
+      .button_transparent-button a {
+        text-decoration: none;
+        color: #fff;
+      }
+      
+      .button_transparent-button:hover{
+        background-color: rgba(255,255,255,0);
+        cursor: pointer;
+       
+      }
+      .button_transparent-button:hover a{
+       color: #f1f7f4;
+      }
+
+      .button_keyboard-button{
+        font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        color:rgb(255, 255, 255);
+        padding: 4px 12px;
+        background-color: #030303;
+        font-size: 20px;
+        border: 2px solid #0a0a0a;
+        border-radius: 5px;
+        transition: 0.8s;
+
+      }
+
+      .button_keyboard-button:hover{
+        background-color: rgba(255,255,255,0);
+        cursor: pointer;
+      }
+
+      .fontdecoration_guesgoes_here{
+      font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 50px;
+      color:rgba(0, 0, 0, 0.671);
+
+
+      }
+
+      .fontdecoration_text_you_win{
+        font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 20px;
+        color:rgba(0, 0, 0, 0.712);
+  
+  
+        }
+
+        #time{
+          font-size: 30px;
+        }
+
+
+
+        
+
+      

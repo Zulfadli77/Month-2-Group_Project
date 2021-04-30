@@ -1,0 +1,53 @@
+body{
+    background-color: #000000;
+}
+a {
+    background-color: #fff;
+    padding: 6px;
+}
+.main-gamegrid {
+    text-align: center;
+    background-color: #000000;
+}
+
+.titlerow {
+    
+    margin-right: auto;
+    margin-left: 10%;
+    color: #ffffff;
+}
+.grid {
+    margin: auto;
+    width: 600px;
+    height: 600px;
+    background-color: #000;
+}
+
+.score-base {
+    margin-left: auto;
+    margin-right: 45%;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.cell-block {
+    width: 130px;
+    height: 130px;
+    margin: 7px;
+    display: inline-block;
+    overflow: hidden;
+    border: 1px solid red;
+    background-color: #adebeb;
+    line-height: 120px;
+    font-family: 'Original Surfer', cursive;
+    font-size: 40px;
+    transition: all .3s;
+}
+
+.highscore {
+    color: greenyellow;
+}
+
+#gameState {
+    color: red;
+}

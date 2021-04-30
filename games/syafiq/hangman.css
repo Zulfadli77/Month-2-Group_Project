@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Radley:ital@1&display=swap');
+
+:root{
+    font-family:'Radley', serif; 
+    color: #401d12;
+    background-color: black;
+    object-fit: cover;
+    font-weight: bold;
+}
+
+body{
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+}
+
+h1{
+    margin-top: -10px;
+    font-size: 6rem;
+    text-shadow: 2px 2px black;
+    color: #605ee9;
+    animation: inh1-flicker 3s linear infinite;
+    
+}
+
+p{
+    font-size: 3rem;
+    color: #d9ae7a;
+    text-shadow: 2px 2px black;
+    margin-top: 0px;
+    color: #605ee9;
+}
+
+#keyboard{
+    font-size: 3rem;
+    color: #ad3a3a;
+    text-shadow: 2px 2px black;
+    margin-top: -30px;
+    margin-bottom: 20px;
+}
+
+#wordSpotlight{
+    font-size: 3rem;
+    color: #d9ae7a;
+    text-shadow: 2px 2px black;
+    margin-top: -30px;
+    color: #605ee9;
+    
+}
+
+@keyframes inh1-flicker {
+    0% {
+        opacity: 0.2;
+        text-shadow: 0px 0px 20px #e810c4;
+    }
+
+    5% {
+        opacity: 0.7;
+        text-shadow: 0px 0px 40px #10e822;
+    }
+
+    15% {
+        opacity: .4;
+        text-shadow: 0px 0px 20px #e810c4;
+    }
+
+    30% {
+        opacity: .6;
+        text-shadow: 0px 0px 40px #10e822;
+    }
+
+    45% {
+        opacity: .3;
+        text-shadow: 0px 0px 20px #e810c4;
+    }
+
+    55% {
+        opacity: .6;
+        text-shadow: 0px 0px 40px #10e822;
+    }
+
+    5% {
+        opacity: 0.2;
+        text-shadow: 0px 0px 20px #e810c4;
+    }
+
+    75% {
+        opacity: 0.9;
+        text-shadow: 0px 0px 40px #10e822;
+    }
+
+    100% {
+        opacity: .4;
+        text-shadow: 0px 0px 20px #e810c4;
+    }
+}
+
+img{
+    height: 40vh;
+}
+
+.float-right{
+    margin-top: -60px;
+    font-size: 3rem;
+    text-transform:capitalize;
+    text-shadow: 2px 2px black;
+    color: #605ee9;
+}
+
+button{
+    background-color: #222121;
+    border: 5px solid #d4d65b;
+    border-radius: 5px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    opacity: 0.4;
+    color: #d48066;
+    font-weight: bold;
+    padding: 3px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px black;
+    cursor: pointer;
+    animation: inb-flicker 6s linear infinite;
+    
+}
+
+button:hover{
+    background-color: #774127;
+    border: .5px solid #401d12;
+    /* box-shadow: 3px 6px 18px red; */
+    color: white;
+    
+}
+
+@keyframes inb-flicker {
+    0% {
+        opacity: 0;
+        box-shadow: 0px 0px 78px 4px #e8e410;
+    }
+
+    2% {
+        opacity: 0.4;
+        box-shadow: 0px 0px 78px 4px #e85f10d0;
+    }
+
+    10% {
+        opacity: .8;
+        box-shadow: 0px 0px 78px 4px #e8e410;
+    }
+
+    25% {
+        opacity: 0.4;
+        box-shadow: 0px 0px 78px 4px #e85f10d0;
+    }
+
+    50% {
+        opacity: .6;
+        box-shadow: 0px 0px 78px 4px #e8e410;
+    }
+
+    65% {
+        opacity: 0.6;
+        box-shadow: 0px 0px 78px 4px #e85f10d0;
+    }
+
+    85% {
+        opacity: .5;
+        box-shadow: 0px 0px 78px 4px #e8e410;
+    }
+
+    100% {
+        opacity: .8;
+        box-shadow: 0px 0px 78px 4px #e85f10;
+    }
+}
+
+.resetbtn{
+    background-color: #532006;
+    color: #d9ae7a;
+    font-size: 2rem;
+    opacity: 0.9;
+    padding: 1.2rem;
+    text-shadow: 2px 2px black;
+    border-radius: 15px;
+    text-transform: capitalize;
+    border-color: #d9ae7a;
+    border: 5px solid;
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.resetbtn:hover{
+    background-color: #d9ae7a;
+    cursor: pointer;
+}

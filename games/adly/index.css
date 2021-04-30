@@ -1,0 +1,21 @@
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+a {
+    background-color: #fff;
+    padding: 3px;
+}
+a:hover{
+    background-color: #fff;
+    opacity: 70%;
+}
+
+.wip {
+    opacity: 70%;
+}
+
+.gamename {
+    margin-left: 100px;
+}

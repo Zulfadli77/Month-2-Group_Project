@@ -1,0 +1,55 @@
+body {
+	background-color: #000;
+	color: #fff;
+}
+a {
+	background-color: #fff;
+	padding: 6px;
+}
+.ttt {
+	text-align: center;
+}
+
+
+
+#game1 {
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	width: 600px;
+	margin: 50px auto;
+}
+
+.box {
+	font-family: 'Gloria Hallelujah', cursive;
+	width: 200px;
+	height: 200px;
+	box-shadow: 0 0 0 1px #333333;
+	border: 1px solid #fff;
+	cursor: pointer;
+	color: #fff;
+	line-height: 100px;
+	font-size: 140px;
+	padding-top: 40px;
+}
+
+@media only screen and (max-width: 700px) {
+	#game1 {
+		display: grid;
+		grid-template-columns: repeat(3, auto);
+		width: 300px;
+		margin: 50px auto;
+	}
+
+	.box {
+		font-family: 'Gloria Hallelujah', cursive;
+		width: 100px;
+		height: 100px;
+		box-shadow: 0 0 0 1px #333333;
+		border: 1px solid #333333;
+		cursor: pointer;
+		color: #fff;
+		line-height: 20px;
+		font-size: 80px;
+	}
+}
+

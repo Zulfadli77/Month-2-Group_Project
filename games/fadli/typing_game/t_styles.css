@@ -1,0 +1,136 @@
+*{
+   box-sizing: border-box;
+}
+
+body{
+   background-image: url(img/letters.jpg);
+   font-family: 'Patrick Hand', cursive;
+}
+
+h2, h3, h4 {
+   font-family: 'Architects Daughter', cursive;
+   color: #ffffff;
+}
+
+p{
+   font-size: 1.5rem;
+}
+
+header{
+   font: 1.5rem 'Patrick Hand', cursive;
+   color:  #d6ae7b;
+   text-shadow: 2px 2px #000000 ;
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px;
+    margin-top: 30px;
+    width: 100%
+}
+
+.word_input, .word_output{
+   position: relative;
+   font: bold 1.2em/1.8 'Architects Daughter', cursive;
+   width: 100%;
+   height: 30vh;
+   margin: 0 auto;
+   padding: 20px;
+   background: linear-gradient(to right, #eacda3, #d6ae7b);
+   border-radius: 10px;
+   box-shadow: inset 0 0 8px 1px rgba(0,0,0,.2);
+   overflow: hidden;
+   resize: none;
+}
+.word_output{
+   line-height: 1.5em;
+   height: auto;
+   background: #000000;
+  text-align: justify;
+}
+
+.message{
+   margin-bottom: 20px;
+}
+.wpm, .cpm, .errors, .accuracy, 
+.time, .score {
+  background: linear-gradient(to right, #eacda3, #d6ae7b);
+  height: auto;
+  width: 70px;
+  margin:5px;
+  padding: 5px;
+  border-radius: 15%;
+  box-shadow: black 5px 8px 5px;
+  text-transform: uppercase;
+}
+
+.box_text {
+      font-size: 0.6rem;
+}
+
+.show_wpm, .show_cpm, .show_errors,
+.show_accuracy, .show_score, .show_time{
+   font-size: 1.8rem;
+}
+
+.cpm, .wpm, .score{
+  display: none;
+}
+
+.restart_btn, .highscore_btn{
+  display: "none";
+  background: linear-gradient(to right, #4b4946, #f59313);
+  font-size: 1.5rem;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: black 5px 8px 5px;
+  place-items: center;
+}
+
+.incorrect_char {
+  color: red;
+  text-decoration: underline;
+}
+  
+.correct_char {
+  color: darkgreen;
+}
+
+
+@media (max-width: 720px){
+
+   h2,h3,h4,p, .word_input, .word_output{
+      font-size:1em;
+   }
+
+   .word_input, .word_output{
+      position: relative;
+      font: bold 0.8em/1.5;
+      width: 100%;
+      height:20vh;
+      margin: 0 auto;
+      padding: 10px;
+   }
+
+   .word_output{
+      height: auto;
+   }
+
+   .wpm, .cpm, .errors, .accuracy, 
+.time, .score {
+  width: 50px;
+}
+
+.box_text {
+      font-size: 0.4rem;
+}
+
+.show_wpm, .show_cpm, .show_errors,
+.show_accuracy, .show_score, .show_time{
+   font-size: 1.2rem;
+}
+
+.restart_btn, .highscore_btn{
+   font-size: 1.2rem;
+}
+
+}

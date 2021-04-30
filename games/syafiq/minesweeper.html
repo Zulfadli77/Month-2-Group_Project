@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Minesweeper</title>
+  <link rel="stylesheet" href="minesweeper.css"></link>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="up">
+    <h1 id="uph1">M<div class="ups">INE</div>S<div class="ups">WEEPER</div>
+  </div>
+
+  <div class="container">
+    <div class="grid"></div>
+    <div class="fColor">Flags left: <span id='flags-left'></span></div>
+    <div id="result"></div>
+    <button id="cReset" onclick="resetbtn()">RESET</button>
+    <button id="cReset" onclick="location.href = 'index.html'">BACK</button>
+  </div>
+
+  <div class="container1">
+    <ol>
+      <li>The purpose of the game is to open all the cells of the board which do not contain a bomb. You lose if you set off a bomb cell.</li>
+
+      <li>Every non-bomb cell you open will tell you the total number of bombs in the eight neighboring cells. 
+        Once you are sure that a cell contains a bomb, you can right-click to put a flag it on it as a reminder. 
+        Once you have flagged all the bombs around an open cell, you can quickly open the remaining non-bomb cells 
+        by shift-clicking on the cell.</li>
+
+      <li>To start a new game (abandoning the current one), just click on the yellow face button.</li>
+
+      <li>Click on Reset button to reset game</li>
+    </ol>
+  </div>
+  
+  <script src="minesweeper.js" charset="utf-8"></script>
+</body>
+</html>

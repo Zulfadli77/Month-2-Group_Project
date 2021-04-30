@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Rock+Salt&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bad+Script&family=Krona+One&family=Rock+Salt&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 body {
   /*background: url() no-repeat center center fixed;
@@ -78,6 +78,14 @@ body {
   color:#ff6045;
 }
 
+#temp{
+  font-weight: bolder;
+}
+
+#weather{
+  text-transform: capitalize;
+}
+
 #stats{
   margin-left:21px;
 }
@@ -98,10 +106,6 @@ body {
   -webkit-transform:rotate(180deg);
   transform:rotate(180deg);
 }
-
-
-
-
 
 /*quote*/
 
@@ -166,7 +170,66 @@ body {
 
 
 
+/*summary*/
 
+.summary{
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  text-align: justify;
+  text-justify: inter-word;
+  text-indent: 50px;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  height: 25vh;
+  overflow-y: scroll;
+  border:2px solid #ff6045;
+  border-radius: 10px;
+}
+
+.summary::-webkit-scrollbar-thumb {
+  background: #ffa500;
+}
+
+/*project*/
+.projects{
+  border-radius: 10px;
+  background-color: #0944AD;
+  color:#ff6045;
+  font-family: 'Anton', sans-serif;
+  height:60vh;
+  overflow-y: scroll;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+
+}
+
+.projects::-webkit-scrollbar-thumb {
+  background:  #ff6045;
+}
+
+.projects h3{
+  text-align: center;
+}
+
+.projects li{
+  margin-top: 20px;
+}
+.projects li span{
+  letter-spacing: 1px;
+}
+
+.projects a{
+  color:#ffa500;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+.projects p{
+  margin-top:5px;
+  color:#fff;
+  font-family: 'Roboto', sans-serif;
+}
 
 
 
@@ -184,6 +247,7 @@ body {
   border:0px;
   font-weight: bold;
   color:#fff;
+  font-family: 'Orbitron', sans-serif;
 }
 
 #do1{
