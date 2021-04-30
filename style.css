@@ -89,14 +89,14 @@ body {
 }
 
 #forecast button i{
-  -moz-transition: all 0.5s linear;
-  -webkit-transition: all 0.5s linear;
-  transition: all 0.5s linear;
+  -moz-transition: all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
 }
-#forecast button i:hover{
-  -moz-transform:rotate(450deg);
-  -webkit-transform:rotate(450deg);
-  transform:rotate(450deg);
+#forecast button i:active{
+  -moz-transform:rotate(180deg);
+  -webkit-transform:rotate(180deg);
+  transform:rotate(180deg);
 }
 
 
