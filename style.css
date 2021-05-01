@@ -196,11 +196,23 @@ h3{
   text-align: center;
 }
 
-.youtube .video{
+.video{
   padding:10px 10px;
 }
-.youtube .video button{
+
+.video button{
   display:none;
+}
+
+.video iframe{
+  width:500px;
+  height: 281px;
+}
+
+.video li{
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
 }
 
 
@@ -224,6 +236,10 @@ h3{
 
 .summary::-webkit-scrollbar-thumb {
   background: #ffa500;
+}
+
+.summary h3{
+  color:#ff6045;
 }
 
 /*project*/
@@ -272,6 +288,7 @@ h3{
   left:0;
   width:100vw;
   display:flex;
+  padding:0;
 }
 
 #gt button{
