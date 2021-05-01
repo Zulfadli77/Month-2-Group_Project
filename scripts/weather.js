@@ -6,12 +6,11 @@ request.onload = function(){
   console.log(obj);
   document.getElementById('weather').innerHTML = obj.weather[0].description;
   document.getElementById('location').innerHTML = obj.name;
-  document.getElementById('temp').innerHTML = obj.main.temp - 273.15;
+  const tempe = obj.main.temp - 273.15;
+  document.getElementById('temp').innerHTML = tempe.toFixed(1);
   document.getElementById('icon').src = "http://openweathermap.org/img/w/"+obj.weather[0].icon+".png";
 }
 if(request.status==200){
   console.log("ERROR");
 }
 request.send();
-
-

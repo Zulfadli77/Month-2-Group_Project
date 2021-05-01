@@ -10,6 +10,11 @@ body {
   overflow-x: hidden;
 }
 
+h3{
+  font-family: 'Anton', sans-serif;
+   text-align: center;
+   padding:5px;
+}
 
 ::-webkit-scrollbar {
   height: 10px;              /* height of horizontal scrollbar ← You're missing this */
@@ -30,6 +35,8 @@ body {
   width:28rem;
   padding-top:5px;
 }
+
+
 
 
 /*digital clock*/
@@ -124,12 +131,13 @@ body {
     padding: 5px 10px;
     margin-bottom: 10px;
     text-align: center;
-    height:18vh;
+    height:16vh;
 }
 
 .prayer-container{
     background-image: url(img/pray.jpg);
-    fill:cover;
+    background-position:left bottom;
+    background-size:cover;
 }
 
 .prayer_time {
@@ -177,7 +185,23 @@ body {
 }
 
 
+/*youtube*/
 
+.youtube{
+  overflow-y: scroll;
+  height:50vh;
+  background-color:red;
+  border-radius: 10px;
+  border:2px solid red;
+  text-align: center;
+}
+
+.youtube .video{
+  padding:10px 10px;
+}
+.youtube .video button{
+  display:none;
+}
 
 
 /*summary*/
@@ -210,7 +234,7 @@ body {
   font-family: 'Anton', sans-serif;
   height:60vh;
   overflow-y: scroll;
-  padding: 10px 15px;
+  padding: 5px 15px;
   margin-bottom: 10px;
 
 }
@@ -219,9 +243,6 @@ body {
   background:  #ff6045;
 }
 
-.projects h3{
-  text-align: center;
-}
 
 .projects li{
   margin-top: 20px;

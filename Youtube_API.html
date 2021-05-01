@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <title>Youtube_Mangament_System</title>
+</head>
+
+  <body>
+
+  <header id="main-header" class="bg-success text-white p-4 mb-3">
+  <div class="container">
+  <div class="row">
+  <div class="col-md-6">
+  <h3 id="header-title">Back End Youtube API Management System Using JSON</h3>
+  </div>
+  <div class="col-md-6 align-self-center">
+  </div>
+  </div>
+  </div>
+  </header>
+  
+  <div class="container">
+   <div id="main" class="card card-body">
+   <h4 align="right"><a href="index.html" target="_blank"><button class='btn btn-dark' >Visit Youtube API Page</button></a></h4>
+   
+   <h4 class="title">Create Any API News On Youtube</h4>
+   
+
+    
+      <input type="text"  class="form-control mr-2" id="txt_ID" placeholder="ID Cannot Be Zero" readonly>
+      <br>
+
+      <button class='btn btn-dark' onclick="change_id()" >Click Here To Give ID</button>
+
+
+      <br>
+      <input type="text" class="form-control mr-2" id="txt_youtube_embed" value="<iframe width='600' height='300' src='https://www.youtube.com/embed/COPY_PASTE_YOUTUBE_KEY_HERE' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>">
+      <br>
+      <input type="text" class="form-control mr-2" id="txt_description" onfocus="this.value=''" placeholder="Description">
+      <br>
+
+      <table border = "0" width = "80%">
+        <tr>
+        <td><input name="Button" type="button" class="btn btn-dark" onclick="save1()" value="CREATE YOUTUBE API"></td>
+        </tr>
+      </table>
+      
+      <br>
+
+      
+      <table border = "0" width = "125%">
+
+
+        <tr>
+        <td><input type="text" class="form-control mr-2" id="txt_ID_2" placeholder="(!)Choose ID To Delete From Count 7 to 1 (Below To Top)"></td>
+        <td>&nbsp;&nbsp;<button class='btn btn-dark' onclick="removeItem()" >Delete</button></td>
+        <td>&nbsp;&nbsp;<button class='btn btn-dark' onclick="clear_table()" >Clear ALL API</button></td>
+        </tr>
+
+
+      </table>
+
+
+      <br>
+      <h4 class="title">Youtube API Database Server</h4>
+
+      <ul id="list" class="list-group">
+    
+      <!--Display All Youtube API Here-->
+
+ 
+
+    </ul>
+
+    </div>
+    </div>
+
+ 
+  <p1 id="display_ID" hidden></p1>
+  <p1 id="id_2" hidden></p1>
+  <p1 id="display_youtube_embeded" hidden></p1>
+  <p1 id="display_description" hidden></p1>
+ 
+  <script src="scripts/json_script.js"></script>
+  
+
+
+</body>
+</html>
