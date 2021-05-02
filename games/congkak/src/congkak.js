@@ -1,12 +1,23 @@
-document.addEventListener('DOMContentLoaded', () => {
+//width is the number of houses per row
+let width = document.getElementById('widthInput').value;
+//const width = 4;
+document.getElementById("applyWidth").addEventListener("click", function () {
+    width = document.getElementById('widthInput').value;
+    
+    gameStart();
+});
+
+gameStart();
+
+function gameStart() {
 
     const storehouseGrid1 = document.querySelector('.storehousegrid1');
     const storehouseGrid2 = document.querySelector('.storehousegrid2');
-    const houseGrid = document.querySelector('.housegrid');
-    const scoreEntry = document.querySelector('.score');
+    //const houseGrid = document.querySelector('.housegrid');
+    const houseGrid1 = document.querySelector('.housegrid1');
+    const houseGrid2 = document.querySelector('.housegrid2');
 
-    //width is the number of houses per row
-    const width = 7;
+    
 
     let p2Home = []; //storeHouse, house...,
     let p1Home = []; //houses..., storeHouse,
@@ -15,7 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function createGame() {
         //create storehouse player 2
         let store = document.createElement('div');
-        store.className = "storehouse p1score";
+        //store.className = "storehouse p1score";
+        store.className = "storehouse";
         store.innerHTML = 0;
 
         storehouseGrid1.appendChild(store);
@@ -27,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             house.className = "house";
             house.innerHTML = 5;
 
-            houseGrid.appendChild(house);
+            houseGrid1.appendChild(house);
             p2Home.push(house);
         }
 
@@ -39,13 +51,14 @@ document.addEventListener('DOMContentLoaded', () => {
             house.className = "p1house";
             house.innerHTML = 5;
 
-            houseGrid.appendChild(house);
+            houseGrid2.appendChild(house);
             p1Home.push(house);
         }
 
         //create storehouse player 1
         let store2 = document.createElement('div');
-        store2.className = "storehouse p2score";
+        //store2.className = "storehouse p2score";
+        store2.className = "storehouse";
         store2.innerHTML = 0;
 
         storehouseGrid2.appendChild(store2);
@@ -59,13 +72,31 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         */
     }
+
+    function removeGame() {
+        let rem1 = document.getElementsByClassName("storehouse");
+        while (rem1.length > 0) {
+            rem1[0].parentNode.removeChild(rem1[0]);
+        }
+        let rem3 = document.getElementsByClassName("house");
+        while (rem3.length > 0) {
+            rem3[0].parentNode.removeChild(rem3[0]);
+        }
+        let rem4 = document.getElementsByClassName("p1house");
+        while (rem4.length > 0) {
+            rem4[0].parentNode.removeChild(rem4[0]);
+        }
+        
+    }
+    removeGame();
     createGame();
+
     checkBottomRow();
     //aiThink();
     //setTimeout(aimove, 4500);
     
     let lockClick = false; //prevent player from clicking house during action/AI action.
-    console.log("Starting lockClick: " + lockClick);
+    //console.log("Starting lockClick: " + lockClick);
     let clickedHouseP1 = document.getElementsByClassName("p1house");
 
     //testing here
@@ -122,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             setTimeout(function () {
                                 //console.log("After timeout: " + startp2);
                                 marble_at_hand = (Number(marble) - Number(j))
-                                console.log("Marble at hand: " + marble_at_hand);
+                                //console.log("Marble at hand: " + marble_at_hand);
                                 if (startp2 > 0) {
                                     p2Home[startp2].style.backgroundColor = "#80bfff";
                                     let chosenTwo = Number(p2Home[startp2].innerHTML);
@@ -132,14 +163,14 @@ document.addEventListener('DOMContentLoaded', () => {
                                     if (marble_at_hand == 0) {
                                         p1Home[restartp1].style.backgroundColor = "#80bfff";
                                         let chosenThree = Number(p1Home[restartp1].innerHTML);
-                                        console.log("chosenThree is: " + chosenThree)
+                                        //console.log("chosenThree is: " + chosenThree)
                                         if (chosenThree == 0) {
                                             p1Home[restartp1].style.backgroundColor = "#80bfff";
                                             p1Home[restartp1].innerHTML = chosenThree + 1;
                                             //steal
                                             p2Home[restartp1 + 1].style.backgroundColor = "#80bfff";
                                             let stealMarble = p2Home[restartp1 + 1].innerHTML;
-                                            console.log(restartp1 + 1);
+                                            //console.log(restartp1 + 1);
                                             p2Home[restartp1 + 1].innerHTML = 0;
                                             let currentScore = p1Home[width].innerHTML;
                                             p1Home[width].innerHTML = Number(currentScore) + Number(stealMarble);
@@ -212,14 +243,14 @@ document.addEventListener('DOMContentLoaded', () => {
                             }
                             else if (marble_at_hand == 0) {
                                 let chosenOne = Number(p1Home[i + j].innerHTML);
-                                console.log("ChosenOne is: " + chosenOne)
+                                //console.log("ChosenOne is: " + chosenOne)
                                 if (chosenOne == 0) {
                                     p1Home[i + j].style.backgroundColor = "#80bfff";
                                     p1Home[i + j].innerHTML = chosenOne + 1;
                                     //steal
                                     p2Home[i + j + 1].style.backgroundColor = "#80bfff";
                                     let stealMarble = p2Home[i + j + 1].innerHTML;
-                                    console.log(i + j + 1);
+                                    //console.log(i + j + 1);
                                     p2Home[i + j + 1].innerHTML = 0;
                                     let currentScore = p1Home[width].innerHTML;
                                     p1Home[width].innerHTML = Number(currentScore) + Number(stealMarble);
@@ -285,7 +316,7 @@ document.addEventListener('DOMContentLoaded', () => {
         //console.log(lockClick);
         let rando = Math.floor(Math.random() * (p2Home.length - 1)) + 1; //between 1-7. 0 is storeHouse.
         //console.log("AI clicked: " + rando)
-
+        let p1start = 0;
         
         //if opponent clicked house with 0 marbles in it
         if (p2Home[rando].innerHTML == 0) {
@@ -300,7 +331,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             let marble_at_hand = marble;
 
-            let p1start = 0;
+            
             let p2restart = width;
             //console.log("AI's difference: " + diff)
             if (diff > 0) {
@@ -316,69 +347,77 @@ document.addEventListener('DOMContentLoaded', () => {
                         setTimeout(function () {
                             p2Home[rando - j].style.backgroundColor = "#fff";
                             p2Home[rando].style.backgroundColor = "#fff";
-                        }, 550 * j);
+                        }, 540 * j);
                     }
                     else {
-                        setTimeout(function () {
                             //console.log("After timeout: " + startp2);
-                            marble_at_hand = (Number(marble) - Number(j))
-                            //console.log("Marble at hand: " + marble_at_hand);
-                            if (p1start < 7) {
-                                setTimeout(function () {
-                                    let chosenTwo = Number(p1Home[p1start].innerHTML);
-                                    p1Home[p1start].style.backgroundColor = "#ff8080";
-                                    p1Home[p1start].innerHTML = chosenTwo + 1;
-                                }, 500 * j);
-                                setTimeout(function () {
-                                    p1Home[p1start].style.backgroundColor = "#fff";
-                                    p1start++;
-                                }, 550 * j);
-                            }
-                            else {
-                                if (marble_at_hand == 0) {
-                                    p2Home[p2restart].style.backgroundColor = "#ff8080";
-                                    let chosenThree = Number(p2Home[p2restart].innerHTML);
-                                    //console.log("chosenThree is: " + chosenThree)
-                                    if (chosenThree == 0) {
+                        marble_at_hand = (Number(marble) - Number(j))
+                        if (p1start < width) {
+                            let newp1start = p1start;
+                            p1start++;
+                            setTimeout(function () {
+                                let chosenTwo = Number(p1Home[newp1start].innerHTML);
+                                p1Home[newp1start].style.backgroundColor = "#ff8080";
+                                p1Home[newp1start].innerHTML = chosenTwo + 1;
+                            }, 500 * j);
+                            setTimeout(function () {
+                                p1Home[newp1start].style.backgroundColor = "#fff";
+                                //p1start++;
+                            }, 540 * j);
+                        }
+                        else {
+                            if (marble_at_hand == 0) {
+                                //p2Home[p2restart].style.backgroundColor = "#ff8080";
+                                let chosenThree = Number(p2Home[p2restart].innerHTML);
+                                if (chosenThree == 0) {
+                                    setTimeout(function () {
                                         p2Home[p2restart].style.backgroundColor = "#ff8080";
                                         p2Home[p2restart].innerHTML = chosenThree + 1;
                                         //steal
                                         p1Home[p2restart - 1].style.backgroundColor = "#ff8080";
                                         let stealMarble = p1Home[p2restart - 1].innerHTML;
                                         //console.log(restartp1 + 1);
-                                        p1Home[p2restart + 1].innerHTML = 0;
+                                        p1Home[p2restart - 1].innerHTML = 0;
                                         let currentScore = p2Home[0].innerHTML;
                                         p1Home[width].innerHTML = Number(currentScore) + Number(stealMarble);
-                                    }
-                                    else {
+                                    }, 500 * j);
+                                    setTimeout(function () {
+                                        p2Home[p2restart].style.backgroundColor = "#fff";
+                                        //steal
+                                        p1Home[p2restart - 1].style.backgroundColor = "#fff";
+                                    }, 540 * j);
+                                }
+                                else {
+                                    setTimeout(function () {
+                                        /*
                                         p1Home[restartp1].style.backgroundColor = "#ff8080";
                                         p1Home[restartp1].innerHTML = chosenThree + 1;
                                         p2Home[restartp1 + 1].style.backgroundColor = "#fff";
-                                    }
+                                        */
+                                        p2Home[p2restart].style.backgroundColor = "#ff8080";
+                                        p2Home[p2restart].innerHTML = chosenThree + 1;
+
+                                    }, 500 * j);
+                                    setTimeout(function () {
+                                        p2Home[p2restart].style.backgroundColor = "#fff";
+
+                                    }, 540 * j);
                                 }
-                                else {
+                            }
+                            else {
+                                setTimeout(function () {
                                     p2Home[p2restart].style.backgroundColor = "#ff8080";
                                     let chosenThree = Number(p1Home[restartp1].innerHTML);
                                     p2Home[p2restart].innerHTML = chosenThree + 1;
-                                }
+
+                                }, 500 * j);
+                                setTimeout(function () {
+                                    p2Home[p2restart].style.backgroundColor = "#fff";
+
+                                }, 540 * j);
                             }
-                        }, 500 * j);
-                        /* I forgot where this belong
-                        setTimeout(function () {
-                            if (startp2 > 0) {
-                                p2Home[startp2].style.backgroundColor = "#fff";
-                                startp2--;
-                                document.getElementById('turntables').innerHTML = "Waiting for Opponent...";
-                            }
-                            else {
-                                p1Home[restartp1].style.backgroundColor = "#fff";
-                                restartp1++;
-                                document.getElementById('turntables').innerHTML = "Waiting for Opponent...";
-                            }
-                        }, 550 * j);
-                        */
+                        }
                     }
-                    //
                 }
                 lockClick = false;
                 document.getElementById('turntables').innerHTML = "Your Turn";
@@ -412,37 +451,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 //setTimeout(aiThink, 5000);
                 setTimeout(checkTopRow, 5000);
             }
-            //unconditional AI move
-            /*
-            else {
-                for (let j = 1; j <= marble; j++) {
-
-                    if ((rando - j) >= 0) {
-                        setTimeout(function () {
-                            let chosenOne = Number(p2Home[rando - j].innerHTML);
-                            p2Home[rando - j].style.backgroundColor = "#ff8080";
-                            p2Home[rando - j].innerHTML = chosenOne + 1;
-                        }, 500 * j);
-                        setTimeout(function () {
-                            p2Home[rando - j].style.backgroundColor = "#fff";
-                            p2Home[rando].style.backgroundColor = "#fff";
-                        }, 550 * j);
-                    }
-                    else {
-                        setTimeout(function () {
-                            let chosenTwo = Number(p1Home[p1start].innerHTML);
-                            p2Home[p1start].style.backgroundColor = "#ff8080";
-                            p2Home[p1start].innerHTML = chosenTwo + 1;
-                        }, 500 * j);
-                        setTimeout(function () {
-                            p2Home[p1start].style.backgroundColor = "#fff";
-                            p1start++;
-                        }, 550 * j);
-                    }
-                }
-                lockClick = false;
-                document.getElementById('turntables').innerHTML = "Your Turn";
-            } */
+            
             else {
                 for (let j = 1; j <= marble; j++) {
                     setTimeout(function () {
@@ -492,7 +501,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function checkTopRow() {
         let entryExist = 0;
-        for (let i = 1; i < width+1; i++) {
+        for (let i = 1; i < width; i++) {
             if (p2Home[i].innerHTML != 0) {
                 entryExist++;
             }
@@ -517,7 +526,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
         else {
-            console.log("checkTopLine says game continue: " + entryExist);
+            //console.log("checkTopLine says game continue: " + entryExist);
             aiThink();
         }
     }
@@ -548,13 +557,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
         else {
-            console.log("checkBottomLine says game continue: " + entryExist);
+            //console.log("checkBottomLine says game continue: " + entryExist);
         }
     }
 
-})
-
-
+}
 
 function resetButton() {
     window.location.reload();

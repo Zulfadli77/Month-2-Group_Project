@@ -14,6 +14,7 @@
                 <h1 class="titlerow">Congkak</h1>
                 <h3 class="score-base">VS: <span class="score">A.I.</span></h3>
             </div>
+            <!--
             <div class="row gamerow">
                 <div class="col-sm-1"></div>
                 <div class="col-sm-2">
@@ -33,17 +34,66 @@
                 </div>
                 <div class="col-sm-1"></div>
             </div>
+            -->
+            <div class="row gamerow">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-2">
+                    <div class="storehouseGrid1">
+
+                    </div>
+                </div>
+                <div class="col-sm-6 midgrid">
+                    <div class="houseGrid1">
+
+                    </div>
+                    <div class="houseGrid2">
+
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="storehouseGrid2">
+
+                    </div>
+                </div>
+                <div class="col-sm-1"></div>
+            </div>
         </div>
     </div>
     <div class="container">
         <div id="gameState" class="row justify-content-center">
             <h3 id="turntables">Your Turn</h3>
         </div>
+        <div id="widthChange" class="row justify-content-center">
+            <p>Change Number of Houses:</p>
+            <input id="widthInput" type="number" value="7" min="4" max="7"/>
+            <button id="applyWidth">Apply</button>
+        </div>
         <div class="row justify-content-center">
             <button onclick="resetButton()">Restart</button>
         </div>
     </div>
 
+    <div class="container">
+        <div id="ruleBook" class="row justify-content-center">
+            <h3 id="myRules">Rules</h3>
+        </div>
+        <div id="rule" class="row">
+            <img src="img/rule1.jpg" />
+            <ul>
+                <li>The Numbers in houses (usually used pebbles/seeds or marbles) moves anti-clockwise. Each 'pebbles' are stored inside every house, and player's storehouse</li>
+                <li>Players can choose which house to start, and the amount of pebbles (numbers) indicate the move. One pebble means push the pebble to one house to the right, </li>
+                <li>moving anti-clockwise until the amount of pebbles run out, skipping opponent's storehouse</li>
+                <li>If the pebbles ends at player's storehouse, the player gains another turn, if one player houses are all empty, the game ends with ALL the pebbles in the remaining house goes into the house owner's storehouse</li>
+                <li>The amount of pebbles inside player's storehouse is their score. The player with the highest score wins</li>
+                <li>Stealing: Landing on an empty house on your row will 'steal' your opponent's pebbles on the opposite house</li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div id="footer" class="row justify-content-center">
+            <p>All Rights Reserved 2021</p>
+        </div>
+    </div>
 
 
 

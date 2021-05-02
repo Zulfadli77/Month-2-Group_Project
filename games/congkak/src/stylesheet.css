@@ -87,10 +87,49 @@ a {
     transition: all .3s;
 }
 
-.highscore {
-    color: greenyellow;
-}
 
 #gameState {
     color: red;
+}
+
+#rulebook {
+    color: #fffbcf;
+}
+
+#myRules {
+    margin-top: 50px;
+    border-top: 5px dashed greenyellow;
+    border-bottom: 5px dashed greenyellow;
+    padding-left: 47%;
+    padding-right: 47%;
+}
+
+#rule {
+    border-bottom: 5px dashed greenyellow;
+    color: #e1dcbc;
+}
+
+#footer {
+    padding: 40px;
+    color: white;
+}
+
+.houseGrid1{
+    width: 100%;
+}
+.houseGrid2 {
+    width: 100%;
+}
+
+#widthChange {
+    padding: 40px;
+    color: white;
+}
+#widthInput{
+    width: 60px;
+    height: 30px;
+}
+#applyWidth {
+    width: 60px;
+    height: 30px;
 }
