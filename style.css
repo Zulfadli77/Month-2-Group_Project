@@ -14,6 +14,7 @@ h3{
   font-family: 'Anton', sans-serif;
    text-align: center;
    padding:5px;
+   letter-spacing: 2px;
 }
 
 ::-webkit-scrollbar {
@@ -27,7 +28,7 @@ h3{
 }
 
 ::-webkit-scrollbar-thumb {
-  background:  #0944AD;
+  background:  #ffa500;
   border-radius: 1rem;
 }
 
@@ -129,30 +130,40 @@ h3{
 .prayer-container {
     border-radius: 10px;
     padding: 5px 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     text-align: center;
     height:16vh;
+    -webkit-box-shadow: 0px 2px 8px 1px #000000; 
+    box-shadow: 0px 2px 8px 1px #000000;
 }
 
 .prayer-container{
     background-image: url(img/pray.jpg);
     background-position:left bottom;
     background-size:cover;
-}
-
-.prayer_time {
-    font-size: 1.6em;
-    font-weight: 800;
-    text-align: left;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
 }
 
 #prayer_clock, #prayer_city, #prayer_date{
     display:none;
 }
-.prayer-container{
-    font-size: 1.2em;
-    font-weight: 800;
+
+table{
+  margin-left: auto;
+  margin-right: auto;
 }
+td{
+  width:80px;
+  color:#fff;
+  background-color: rgba(204, 204, 204, 0.4);
+}
+
+td:nth-child(odd) {
+  background-color: rgba(166, 166, 166, 0.4);
+}
+
 
 
 
@@ -162,12 +173,15 @@ h3{
     border-radius: 10px;
     text-align: center;
     background-color: #ff6045;
+    border:5px solid #ff6045;
     font-family: 'Anton', sans-serif;
     color:#0944AD;
     height:18vh;
     overflow-y: scroll;
     padding: 5px 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    -webkit-box-shadow: 0px 2px 8px 1px #000000; 
+    box-shadow: 0px 2px 8px 1px #000000;
 }
 
 #quote{
@@ -189,11 +203,21 @@ h3{
 
 .youtube{
   overflow-y: scroll;
-  height:50vh;
+  height:47vh;
   background-color:red;
   border-radius: 10px;
-  border:2px solid red;
+  border:5px solid red;
   text-align: center;
+  -webkit-box-shadow: 0px 2px 8px 1px #000000; 
+  box-shadow: 0px 2px 8px 1px #000000;
+}
+
+/*.youtube::-webkit-scrollbar-thumb {
+  background: #ffa500;
+}*/
+
+.youtube h3{
+  color:#fff;
 }
 
 .video{
@@ -224,19 +248,20 @@ h3{
   font-weight: 600;
   text-align: justify;
   text-justify: inter-word;
-  text-indent: 50px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   padding: 10px 20px;
   height: 25vh;
   overflow-y: scroll;
-  border:2px solid #ff6045;
+  border:5px solid #fff;
   border-radius: 10px;
-  color:#0944AD;
+  color:#000;
+  -webkit-box-shadow: 0px 2px 8px 1px #000000; 
+  box-shadow: 0px 2px 8px 1px #000000;
 }
 
-.summary::-webkit-scrollbar-thumb {
-  background: #ffa500;
-}
+/*.summary::-webkit-scrollbar-thumb {
+  background: #0944AD;
+}*/
 
 .summary h3{
   color:#ff6045;
@@ -246,37 +271,40 @@ h3{
 .projects{
   border-radius: 10px;
   background-color: #0944AD;
-  color:#ff6045;
+  color:#fff;
   font-family: 'Anton', sans-serif;
-  height:60vh;
+  height:58vh;
   overflow-y: scroll;
   padding: 5px 15px;
+  border:5px solid #0944AD;
   margin-bottom: 10px;
-
+  -webkit-box-shadow: 0px 2px 8px 1px #000000; 
+  box-shadow: 0px 2px 8px 1px #000000;
 }
 
-.projects::-webkit-scrollbar-thumb {
+/*.projects::-webkit-scrollbar-thumb {
   background:  #ff6045;
-}
+}*/
 
 
 .projects li{
   margin-top: 20px;
+  font-family: 'Roboto', sans-serif;
 }
-.projects li span{
+
+.projects span{
   letter-spacing: 1px;
+  font-weight:700;
 }
 
 .projects a{
-  color:#ffa500;
+  color:#fff;
   text-decoration: underline;
-  text-underline-position: under;
 }
 
 .projects p{
   margin-top:5px;
   color:#fff;
-  font-family: 'Roboto', sans-serif;
 }
 
 
@@ -328,24 +356,38 @@ background-color:#800080;
 
 
 /*media breakpoint*/
+@media screen and (max-width:1450px){
+  .video iframe{
+  width:400px;
+  height: 225px;
+  }
+}
+
+
 @media screen and (max-width:1200px) {
   #logo{
     display: flex;
     justify-content: center;
   }
-}
-
-@media screen and (max-width:1000px) {
   #heading{
     display:flex;
     justify-content: center;
   }
   .head{
     display:flex;
+    width:300px;
+    padding-bottom:20px;
   }
 
   .head90{
     display:none;
+  }
+}
+
+@media screen and (max-width:1000px) {
+  .video iframe{
+  width:280px;
+  height: 157px;
   }
 }
 
@@ -370,4 +412,44 @@ background-color:#800080;
 
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:760px) {
+  .video iframe{
+  width:400px;
+  height: 225px;
+  }
+
+  .summary, .projects, .qWrapper, .prayer-container{
+    overflow-y: visible;
+    height:auto;
+  }
+
+  .prayer-container{
+    margin-top: 10px
+  }
+
+  .youtube{
+    margin-bottom:30px;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .video iframe{
+  width:300px;
+  height: 168px;
+  }
+
+  #logo img{
+    width:300px;
+  }
+  
+  td{
+    font-size:16px;
+  }
+}
+
+@media screen and (max-width:400px){
+  .video iframe{
+  width:250px;
+  height: 140px;
+  }
+}
