@@ -30,7 +30,7 @@
    
 
     
-      <input type="text"  class="form-control mr-2" id="txt_ID" placeholder="ID Cannot Be Zero" readonly>
+      <input type="text"  class="form-control mr-2" id="txt_ID" placeholder="(!) ID Cannot Be Zero & must start with proper ID given 1, 3, 4, 5, 6, 7 only" readonly>
       <br>
 
       <button class='btn btn-dark' onclick="change_id()" >Click Here To Give ID</button>
@@ -45,6 +45,8 @@
       <table border = "0" width = "80%">
         <tr>
         <td><input name="Button" type="button" class="btn btn-dark" onclick="save1()" value="CREATE YOUTUBE API"></td>
+        <td><button class='btn btn-dark' onclick="clear_table()" >Does"t Work? Clear ALL API Until ID is Return To 1</button></td>
+        <td><a href="img/Localstorage_Must_Be_Like_This.jpg" target="_blank"><button class='btn btn-dark'>Localstorage Must Be Like This</button></a></td>
         </tr>
       </table>
       
@@ -57,7 +59,6 @@
         <tr>
         <td><input type="text" class="form-control mr-2" id="txt_ID_2" placeholder="(!)Choose ID To Delete From Count 7 to 1 (Below To Top)"></td>
         <td>&nbsp;&nbsp;<button class='btn btn-dark' onclick="removeItem()" >Delete</button></td>
-        <td>&nbsp;&nbsp;<button class='btn btn-dark' onclick="clear_table()" >Clear ALL API</button></td>
         </tr>
 
 
