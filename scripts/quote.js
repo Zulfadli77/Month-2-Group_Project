@@ -8,7 +8,7 @@ fetch("https://quotes15.p.rapidapi.com/quotes/random/", {
 .then(response => response.json())
 .then(response => {
 	console.log(response);
-	document.getElementById('quote').innerHTML = '"' + response.content + '"';
+	document.getElementById('quote').innerHTML = '<i class="fas fa-quote-right fa-2x"></i>' + '  ' + response.content;
     document.getElementById('author').innerHTML = '- ' + response.originator.name;
 })
 .catch(err => {

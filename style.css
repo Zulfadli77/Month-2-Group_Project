@@ -1,25 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Rock+Salt&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bad+Script&family=Krona+One&family=Rock+Salt&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+
 
 body {
   /*background: url() no-repeat center center fixed;
   background-size: cover;*/
-  width:100vw;
-  overflow-x: hidden;
+  background-color:#ccd0d7;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+h2, h3{
+  font-family: 'Anton', sans-serif;
+  text-align: center;
+  letter-spacing: 2px;
 }
 
 h3{
-  font-family: 'Anton', sans-serif;
-   text-align: center;
-   padding:5px;
-   letter-spacing: 2px;
+  font-size:50px;
+  padding:30px 0px;
 }
 
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parallax {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)), url(img/img1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+.para2 {
+  background-image: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.9)), url(img/img4.jpg);
+}
+
+.para3 {
+  background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(img/img2.jpg);
+}
+
+.para4 {
+  background-image: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)), url(img/img3.jpg);
+}
+
+
+/*
 ::-webkit-scrollbar {
-  height: 10px;              /* height of horizontal scrollbar ← You're missing this */
-  width: 10px;               /* width of vertical scrollbar */
+  height: 10px;              
+  width: 10px;               
   
 }
 
@@ -31,34 +74,41 @@ h3{
   background:  #ffa500;
   border-radius: 1rem;
 }
+*/
 
-#logo img{
-  width:28rem;
-  padding-top:5px;
+
+#head{
+  background-color: #fff;
+  margin-top: -10px;
+  position:fixed;
+  z-index:1;
 }
-
-
 
 
 /*digital clock*/
 .display-clock {
-    font-family: 'Orbitron', sans-serif;
-    margin: auto;
-    padding:0;
-    text-align: center;
-    font-size: 2.2rem;
-    font-weight: 500;
-    color:#ff6045;
-
+  font-family: 'Orbitron', sans-serif;
+  margin: auto;
+  padding:0;
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 500;
+  color:#ff6045;
 }
 
 .display-date {
-    font-family: 'Orbitron', sans-serif;
-    margin:0;
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: 700;
-    color:#0944AD;
+  font-family: 'Orbitron', sans-serif;
+  margin:0;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color:#0944AD;
+}
+
+.prayerTimeBtn{
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .min {
@@ -75,6 +125,8 @@ h3{
   font-family: 'Orbitron', sans-serif;
   padding:10px;
   color:#0944AD;
+  display: flex;
+  justify-content: flex-end;
 }
 
 #icon{
@@ -115,32 +167,24 @@ h3{
   transform:rotate(180deg);
 }
 
-/*heading*/
-
-.head{
-  display:none;
-}
-
-.head90{
-  padding-top: 10vh;
-}
 
 
 /* Prayer Times */
+
+.modal-body{
+  background-image: url(img/pray.jpg);
+  background-position:left bottom;
+  background-size:cover;
+}
+
 .prayer-container {
     border-radius: 10px;
     padding: 5px 10px;
     margin-bottom: 20px;
     text-align: center;
-    min-height:16vh;
-    -webkit-box-shadow: 0px 2px 8px 1px #000000; 
-    box-shadow: 0px 2px 8px 1px #000000;
 }
 
 .prayer-container{
-    background-image: url(img/pray.jpg);
-    background-position:left bottom;
-    background-size:cover;
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
@@ -164,57 +208,103 @@ td:nth-child(odd) {
   background-color: rgba(166, 166, 166, 0.4);
 }
 
+#prayersTimes h2{
+  color: #ff6045;
+}
 
+#closeBtn{
+  background-color: #ff6045;
+}
 
+/*summary*/
+
+.summary{
+  font-size: 24px;
+  text-align: justify;
+  text-justify: inter-word;
+  height:100vh;
+}
+
+.summary h3{
+  color:#ff6045;
+}
+
+/*project*/
+.projects{
+  color:#fff;
+  padding: 50px 0px;
+}
+
+.projects h3, .projects h5{
+  color:#0944AD;
+}
+.projects i{
+  color:#FFD700;
+  text-shadow: 0 0 2px #000;
+}
+.projects span i{
+  color:transparent;
+  text-shadow: 0 0 2px #000;
+}
+
+.projects img{
+  width:125px;
+  height:auto;
+  border-radius:10px;
+  margin-top:10px;
+}
 
 /*quote*/
 
 .qWrapper{
-    border-radius: 10px;
-    text-align: center;
-    background-color: #ff6045;
-    border:5px solid #ff6045;
-    font-family: 'Anton', sans-serif;
-    color:#0944AD;
-    height:18vh;
-    overflow-y: scroll;
-    padding: 5px 10px;
-    margin-bottom: 20px;
-    -webkit-box-shadow: 0px 2px 8px 1px #000000; 
-    box-shadow: 0px 2px 8px 1px #000000;
+  text-align: center;
+  font-family: 'Anton', sans-serif;
+  color:#fff;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+}
+
+.qWrapper h3{
+  display: none;
 }
 
 #quote{
-    font-size: 1.4rem;
-    font-weight: 400;
-    font-family: 'Bad Script', cursive;
-    color:#fff;   
+  font-size: 30px;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+  color:#fff;   
 }
 
 #author{
-    text-align: end;
-    padding-right: 30px;
-    letter-spacing: 1px;
-    padding-bottom: 10px;
+  text-align: end;
+  letter-spacing: 1px;
+  padding-top: 10px;
+  font-size:40px;
+  font-family: 'Cedarville Cursive', cursive;
 }
+
+/*jokes*/
+.api_jokes i{
+  color:#ff6045;
+}
+
+#fun{
+  font-size:30px;
+  margin-bottom: 30px;
+}
+
+#funBtn{
+  background-color: #ff6045;
+}
+
 
 
 /*youtube*/
 
 .youtube{
-  overflow-y: scroll;
-  height:45vh;
   background-color:red;
-  border-radius: 10px;
-  border:5px solid red;
   text-align: center;
-  -webkit-box-shadow: 0px 2px 8px 1px #000000; 
-  box-shadow: 0px 2px 8px 1px #000000;
 }
-
-/*.youtube::-webkit-scrollbar-thumb {
-  background: #ffa500;
-}*/
 
 .youtube h3{
   color:#fff;
@@ -240,87 +330,15 @@ td:nth-child(odd) {
 }
 
 
-/*summary*/
 
-.summary{
-  font-size: 20px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 600;
-  text-align: justify;
-  text-justify: inter-word;
-  margin-bottom: 20px;
-  padding: 10px 20px;
-  height: 25vh;
-  overflow-y: scroll;
-  border:5px solid #fff;
-  border-radius: 10px;
-  color:#000;
-  -webkit-box-shadow: 0px 2px 8px 1px #000000; 
-  box-shadow: 0px 2px 8px 1px #000000;
-}
-
-/*.summary::-webkit-scrollbar-thumb {
-  background: #0944AD;
-}*/
-
-.summary h3{
-  color:#ff6045;
-}
-
-/*project*/
-.projects{
-  border-radius: 10px;
-  background-color: #0944AD;
-  color:#fff;
-  font-family: 'Anton', sans-serif;
-  height:56vh;
-  overflow-y: scroll;
-  padding: 5px 15px;
-  border:5px solid #0944AD;
-  margin-bottom: 10px;
-  -webkit-box-shadow: 0px 2px 8px 1px #000000; 
-  box-shadow: 0px 2px 8px 1px #000000;
-}
-
-/*.projects::-webkit-scrollbar-thumb {
-  background:  #ff6045;
-}*/
-
-
-.projects li{
-  margin-top: 20px;
-  font-family: 'Roboto', sans-serif;
-}
-
-.projects span{
-  letter-spacing: 1px;
-  font-weight:700;
-}
-
-.projects a{
-  color:#fff;
-  text-decoration: underline;
-}
-
-.projects p{
-  margin-top:5px;
-  color:#fff;
-}
 
 
 
 /*gt css*/
-#gt{
-  position:fixed;
-  bottom:0;
-  left:0;
-  width:100vw;
-  display:flex;
-  padding:0;
-}
+
 
 #gt button{
-  width:12.5vw;
+  width:50px;
   border:0px;
   padding:10px;
   font-weight: bold;
