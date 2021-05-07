@@ -25,7 +25,6 @@ h3{
   padding:30px 0px;
 }
 
-
 .center{
   display: flex;
   justify-content: center;
@@ -55,7 +54,11 @@ h3{
 }
 
 .para4 {
-  background-image: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)), url(img/img3.jpg);
+  background-image: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.9)), url(img/img3.jpg);
+}
+
+.para5 {
+  background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url(img/img5.jpg);
 }
 
 
@@ -283,6 +286,32 @@ td:nth-child(odd) {
   font-family: 'Cedarville Cursive', cursive;
 }
 
+
+/*guling tangan*/
+#gt table{
+  width:800px; 
+}
+
+#gtBase{
+background-image: url(img/gtBase.png);
+  background-size: cover;
+  height:133px;
+}
+
+#gt td{
+  background-color: transparent;
+}
+
+#gt img{
+  width: 80px;
+  height:80px;
+  cursor: pointer;
+}
+
+/*gt animation*/
+
+
+
 /*jokes*/
 .api_jokes i{
   color:#ff6045;
@@ -336,7 +365,7 @@ td:nth-child(odd) {
 
 /*gt css*/
 
-
+/*
 #gt button{
   width:50px;
   border:0px;
@@ -370,7 +399,7 @@ background-color:#2200ff;
 #do2{
 background-color:#800080;
 }
-
+*/
 
 
 

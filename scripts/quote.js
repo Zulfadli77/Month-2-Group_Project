@@ -14,3 +14,4 @@ fetch("https://quotes15.p.rapidapi.com/quotes/random/", {
 .catch(err => {
 	console.error(err);
 });
+
