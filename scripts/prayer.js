@@ -1,4 +1,4 @@
-var api_url = 'https://api.pray.zone/v2/times/dates.json?city=bandar-seri-begawan&start=2021-05-02&end=2021-12-10&school=3';;
+var api_url = 'https://api.pray.zone/v2/times/today.json?city=bandar-seri-begawan&school=3';
 document.addEventListener("DOMContentLoaded", function () {
     PrayerTimesApi();
 });
