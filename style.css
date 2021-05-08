@@ -398,8 +398,14 @@ td:nth-child(odd) {
 }
 
 .projects h3, .projects h5{
-  color:#0944AD;
+  color:#fff;
 }
+
+.projects h3 i{
+  color:#ff6045; 
+  text-shadow: 0 0 0px #000;
+}
+
 .projects i{
   color:#FFD700;
   text-shadow: 0 0 2px #000;
@@ -445,10 +451,38 @@ td:nth-child(odd) {
   font-family: 'Cedarville Cursive', cursive;
 }
 
+/*covid API*/
+
+#covidSec button{
+  background-color: #ff6045;
+  color:#fff;
+  font-weight: bold;
+}
+
+#covidSec h3 i{
+  color:#ff6045;
+}
+
+#countrySelect{
+  height:30px;
+}
+
+#covidSec table{
+  margin-top:10px;
+}
+
+#covidSec th{
+  color:#fff;
+}
+
 
 /*guling tangan*/
 #gt table{
   width:800px; 
+}
+
+#gt i{
+  color:#ff6045;
 }
 
 #gtBase{
@@ -490,7 +524,7 @@ background-image: url(img/gtBase.png);
 /*youtube*/
 
 .youtube{
-  background-image: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)), url(img/img6.png);
+  background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url(img/img6.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -527,43 +561,7 @@ background-image: url(img/gtBase.png);
 
 
 
-/*gt css*/
 
-/*
-#gt button{
-  width:50px;
-  border:0px;
-  padding:10px;
-  font-weight: bold;
-  color:#fff;
-  font-family: 'Orbitron', sans-serif;
-}
-
-#do1{
-background-color:#ff0000;
-}
-#re{
-background-color:#ffa500;
-}
-#mi{
-background-color:#ffff00;
-}
-#fa{
-background-color:#02c702;
-}
-#sol{
-background-color:#008000;
-}
-#la{
-background-color:#0078ff;
-}
-#ti{
-background-color:#2200ff;
-}
-#do2{
-background-color:#800080;
-}
-*/
 
 
 
