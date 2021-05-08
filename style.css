@@ -486,7 +486,10 @@ background-image: url(img/gtBase.png);
 /*youtube*/
 
 .youtube{
-  background-color:red;
+  background-image: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)), url(img/img6.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   text-align: center;
 }
 
@@ -511,6 +514,7 @@ background-image: url(img/gtBase.png);
   font-size: 20px;
   font-family: 'Roboto', sans-serif;
   font-weight: 600;
+  background-color: #ffffff88;
 }
 
 
