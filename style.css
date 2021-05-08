@@ -61,6 +61,10 @@ h3{
   background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url(img/img5.jpg);
 }
 
+.para6{
+  background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url(img/img7.png);
+}
+
 
 /*
 ::-webkit-scrollbar {

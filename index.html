@@ -59,6 +59,7 @@
           <li><a href="#progressSec">Progress Summary</a></li>
           <li><a href="#gameProjectSec">Game Projects</a></li>
           <li><a href="#quoteSec">Quote API</a></li>
+          <li><a href="#covidSec">Covid API</a></li>
           <li><a href="#gt">Guling Tangan</a></li>
           <li><a href="#jokeSec">Jokes API</a></li>
           <li><a href="#youtubeSec">Youtube</a></li>
@@ -164,6 +165,53 @@
       </div>
     </div>
 
+
+    <div id="covidSec" class="container-fluid parallax para6">
+      <div class="row">
+        <div class="col-sm">
+          <h3>&lt;Covid Status: <span id="countryName"></span>&gt;</h3>
+          
+          <input id="searchName" placeholder="Country Name..."></input>
+          <input id="searchIso" placeholder="Country ISO Code..."></input>
+          <button value='send' id="submit" onclick="searchFunc()">Search</button>
+
+          <select id="countrySelect"><option value="" disabled selected>--Select Country--</option></select>
+          <button value='send' id="select" onclick="selectFunc()">Select</button>
+ 
+          <table class="table">     
+            <tbody>
+              <tr>
+                <th scope="col">Total Cases:</th>
+                <td scope="col" id="totalCase"></td>
+                <th scope="col">Case Fatality Rate:</th>
+                <td scope="col" id="caseFatalityRate"></td>
+              </tr>
+              <tr>
+                <th scope="row">New Cases:</th>
+                <td id="newCases"></td>
+                <th scope="row">Total Deaths:</th>
+                <td id="totalDeaths"></td>
+              </tr>
+              <tr>
+                <th scope="row">Infection Risk:</th>
+                <td id="infectionRisk"></td>
+                <th scope="row">New Deaths:</th>
+                <td id="newDeaths"></td>
+              </tr>
+              <tr>
+                <th scope="row">Serious Critical:</th>
+                <td id="seriousCritical"></td>
+                <th scope="row">Total Recovered:</th>
+                <td id="totalRecovered"></td>
+              </tr>
+            </tbody>
+          </table>
+          
+        </div>
+      </div>  
+    </div>
+
+
     <div class="container-fluid parallax para5" id="gt">
       <div class="row d-flex justify-content-center">
         <div class="col-sm">
@@ -256,6 +304,7 @@
     <script src="scripts/prayer.js"></script>
     <script src="scripts/quote.js"></script>
     <script src="scripts/jokes.js"></script>
+    <script src="scripts/covid.js"></script>
     <script src="scripts/gulingTangan.js"></script>
     <script src="scripts/json_index.js"></script>
     
