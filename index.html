@@ -46,6 +46,26 @@
     <div style="height:120px;">
     </div>
 
+    <div class="nav-wrapper">
+    <div class="hamburger-menu" id="toggle">
+      <div class="line line-1"></div>
+      <div class="line line-2"></div>
+      <div class="line line-3"></div>
+    </div>
+
+    <div class="fullnav" id="fullnav">
+      <nav class="fullnavMenu" id="fullnavMenu">
+        <ul>
+          <li><a href="#progressSec">Progress Summary</a></li>
+          <li><a href="#gameProjectSec">Game Pojects</a></li>
+          <li><a href="#quoteSec">Quote API</a></li>
+          <li><a href="#gt">Guling Tangan</a></li>
+          <li><a href="#jokeSec">Jokes API</a></li>
+          <li><a href="#youtubeSec">Youtube</a></li>
+        </ul>
+      </nav>
+    </div>
+
     <!-- Prayers time Modal -->
     <div class="modal fade" id="prayersTimes" tabindex="-1" role="dialog">
       <div class="modal-dialog modal-dialog-centered" role="document">
@@ -53,7 +73,7 @@
           <div class="modal-header d-flex justify-content-center">
             <h2>&lt;Prayer Times&gt;</h2>
           </div>
-          <div class="modal-body">
+          <div class="modal-body ptModal">
             <div class="prayer-container">
               <div class="prayer_time">
               <div id="prayer_city"></div>
@@ -92,7 +112,7 @@
 
 
 
-    <div  class="container-fluid parallax summary d-flex align-items-center ">
+    <div id="progressSec" class="container-fluid parallax summary d-flex align-items-center ">
       <div class="row d-flex justify-content-center">
         <div class="col-sm-8">
             <h3><i class="fas fa-chart-line fa-2x"></i>&lt;Progress Summary&gt;</h3>
@@ -102,7 +122,7 @@
       </div>
     </div>
 
-    <div class="container-fluid projects parallax para2">
+    <div id="gameProjectSec" class="container-fluid projects parallax para2">
       <div class="container">
       <div class="row d-flex justify-content-center">
         <h3>&lt;Game Projects&gt;</h3>
@@ -134,7 +154,7 @@
       </div>
     </div>
 
-    <div class="container-fluid parallax para3">
+    <div id="quoteSec" class="container-fluid parallax para3">
       <div class="row qWrapper d-flex justify-content-center">
         <div class="col-sm-8">
           <h3>&lt;Quote Of The Moment&gt;</h3>
@@ -176,18 +196,8 @@
       </div>
     </div>
 
-<!--
-<button id="do1" onclick="do1Btn()">Q</button>
-      <button id="re" onclick="reBtn()">W</button>
-      <button id="mi" onclick="miBtn()">E</button>
-      <button id="fa" onclick="faBtn()">R</button>
-      <button id="sol" onclick="solBtn()">T</button>
-      <button id="la"onclick="laBtn()">Y</button>
-      <button id="ti" onclick="tiBtn()">U</button>
-      <button id="do2" onclick="do2Btn()">I</button>
--->
 
-    <div class="container-fluid parallax para4">
+    <div id="jokeSec" class="container-fluid parallax para4">
       <div class="row api_jokes">
         <div class="container">
           <h3><i class="fas fa-theater-masks fa-2x"></i>&lt;Programming Jokes&gt;</h3>
@@ -199,7 +209,7 @@
 
     
 
-    <div class="container-fluid youtube">
+    <div id="youtubeSec" class="container-fluid youtube" id="youtubeNav">
       <div class="row">
         <div class="container">
           <h3>&lt;Youtube&gt;</h3>
@@ -238,182 +248,9 @@
           
     </div>
 
-
-<!--
-  	<div class="container-fluid">
-  		<div class="row">
-  			<div class="col-xl-1"></div>
-
-  			<div class="col-xl-5 col-lg-6 col-md-6 ">
-  				<div class="summary">
-  					<h3>&lt;Progress Summary&gt;</h3>
-  					<p>Continuing the program through the 2nd month, we have the opportunity to explore more javascripts. Especially, Document Object Manipulation (DOM) and other intermediate javascript methods(), alongside understanding JSON and APIS. All of these were cattered through online/physical lessons and exercises, especially the monthly projects, which leaves huge impact in our learning growth.</p>
-  					<p>Completing the 2nd month of training, we are equipped to code modern, sophisticated frontend applications, and are able to handle complex user-interface states.</p>
-  				</div>
-  				
-  				<div class="projects">
-  					<div class="container">
-  						<div class="row d-flex justify-content-center">
-  							<h3>&lt;Game Projects&gt;</h3>
-  						</div>
-  						<div class="row d-flex justify-content-center">
-  							<div class="col-xs-4 pr-5">
-  								<a href="games/congkak/game3.html" target="_blank"><img src="img/congkak.png"><h5>Congkak</h5></a>
-  								<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-  								<br/>
-  								<a href="games/adly/index.html" target="_blank"><img src="img/2048.png"><h5>Adly's games</h5></a>							
-  								<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-  							</div>
-  							<div class="col-xs-4 pr-5">
-  								<a href="games/azizul/index.html" target="_blank"><img src="img/pong.png"><h5>Azizul's games</h5></a>
-  								<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-  								<br/>
-  								<a href="games/fadli/index.html" target="_blank"><img src="img/breakout.png"><h5>Fadli's games</h5></a>							
-  								<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-  							</div>
-  							<div class="col-xs-4">
-  								<a href="games/hafiiz/index.html" target="_blank"><img src="img/Snake.png"><h5>Hafiiz's games</h5></a>
-  								<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-  								<br/>
-  								<a href="games/syafiq/index.html" target="_blank"><img src="img/minesweeper.png"><h5>Syafiq's games</h5></a>							
-  								<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-  							</div>
-  						</div>
-  					</div>
-
-
-  					<!--<ol>
-  						<h5>
-  						<li><span>Congkak ( <a href="games/congkak/game3.html" target="_blank">Play</a> )</span><p>Congkak are a subtype of mancala games predominantly found in Southeast Asia. This game was created to be part of our second 'Month 2 group project'.</p></li>
-  						<li><span>Adly's ( <a href="games/adly/index.html" target="_blank">Play</a> )</span><p>These '2048' & 'Tic Tac Toe' games were created part of his individual project.</p></li>
-  						<li><span>Azizul's ( <a href="games/azizul/index.html" target="_blank">Play</a> )</span><p>These 'Hangman', 'Pong vs AI' & 'Tic Tac Toe' games were created part of his individual project.</p></li>
-  						<li><span>Fadli's ( <a href="games/fadli/index.html" target="_blank">Play</a> )</span><p>These 'Break-Out' & 'Typing' games were created part of his individual project.</p></li>
-  						<li><span>Hafiiz's ( <a href="games/hafiiz/index.html" target="_blank">Play</a> )</span><p>This 'Snake' game was created part of his individual project.</p></li>
-  						<li><span>Syafiq's ( <a href="games/syafiq/index.html" target="_blank">Play</a> )</span><p>These 'Hangman', 'Minesweeper' & 'Tic Tac Toe' games were created part of his individual project.</p></li>
-  						</h5>
-  					</ol>--
-  				</div>
-
-  			</div>
-  			<div class="col-xl-5 col-lg-6 col-md-6">
-				<div class="prayer-container">
-			        <div class="prayer_time">
-			            <h3>&lt;Prayer Times&gt;</h3>
-			            <div id="prayer_city"></div>
-			            <div id="prayer_date"></div>
-			            <div id="prayer_clock"></div>
-					</div>
-			            <table>
-			                <tbody>
-			                    <tr>
-			                        <td>Imsak</td>
-			                        <td>Subuh</td>
-			                        <td>Zuhur</td>
-			                        <td>Asr'</td>
-			                        <td>Maghrib</td>
-			                        <td>Isha'</td>   
-			                    </tr>
-
-			                    <tr style="color: #fff;">
-			                        <td id="Imsak"></td>
-			                        <td id="Subuh"></td>
-			                        <td id="Zuhur"></td>
-			                        <td id="Asr"></td>
-			                        <td id="Maghrib"></td>
-			                        <td id="Isha"></td>
-			                    </tr>
-			                </tbody>
-			            </table>	
-				</div>
-
-  				<div class="qWrapper">
-			    	<h3>&lt;Quote Of The Moment&gt;</h3>
-			        <div id="quote"></div>
-			        <div id="author"></div>
-			    </div>
-  				
-  				<div class="youtube">
-					<h3>&lt;Youtube&gt;</h3>
-					<a href="news_updated_by_admin.html" target="_blank"><button class='btn btn-dark'>Updated News</button></a>
-
-					<div class="video">
-						<ul id="list_1" class="list-group">
-						    
-						    <li class=list-group-item> <p><iframe src='https://www.youtube.com/embed/eAA1ZDSCWjI' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
-						    <br>RUROUNI KENSHIN: THE FINAL/THE BEGINNING (2021) Full Trailer - eng sub | Takeru Satoh</p><button class='btn btn-danger btn-sm float-right' delete>Online</button> 
-
-						    <li class=list-group-item> <p><iframe src='https://www.youtube.com/embed/IpX-fqf51mk' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
-						    <br>Najib Jaafri Bruhaha</p><button class='btn btn-danger btn-sm float-right' delete>Online</button>
-
-						    <li class=list-group-item> <p><iframe src='https://www.youtube.com/embed/webl51sS_Rg' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
-						    <br>Di dalam episod Misteri Seram Brunei (MSB) kali ni, Meeza akan mengkongsikan cerita phenomena misteri seram yang pernah terjadi di Brunei pada tahun 2005.</p><button class='btn btn-danger btn-sm float-right' delete>Online</button>
-
-						    <li class=list-group-item> <p><iframe src='https://www.youtube.com/embed/tP2Ye0dp7Do' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
-						    <br>Assalamualaikum & greetings semua. Selamat datang ke episod 1 Misteri Seram Brunei Ka Meeza. Episod 1 ni menceritakan salah satu kisah urban legends kitani, Tangki Suraya. Sosok yang menghantui kawasan kampong yang berdekatan dengan tangki air tersebut.</p><button class='btn btn-danger btn-sm float-right' delete>Online</button>
-
-						    <li class=list-group-item> <p><iframe src='https://www.youtube.com/embed/kNQsxr82U9U' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
-						    <br>Brunei Abandoned Twin Building at The Middle of The Town</p><button class='btn btn-danger btn-sm float-right' delete>Online</button>
-						            
-						    </li>
-						</ul>		      
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-
-
-
-
-<!-- GT Modal Button--
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#gulingTangan">
-  Guling Tangan
-</button>
-
-<!-- GT Modal --
-<div class="modal fade" id="gulingTangan" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="container-fluid" id="gt">
-			<button id="do1" onclick="do1Btn()">Q</button>
-			<button id="re" onclick="reBtn()">W</button>
-			<button id="mi" onclick="miBtn()">E</button>
-			<button id="fa" onclick="faBtn()">R</button>
-			<button id="sol" onclick="solBtn()">T</button>
-			<button id="la"onclick="laBtn()">Y</button>
-			<button id="ti" onclick="tiBtn()">U</button>
-			<button id="do2" onclick="do2Btn()">I</button>
-		</div>
-		<script src="scripts/gulingTangan.js"></script>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
--->
-
-
-
-
-
-
-
-
-	
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="scripts/navi.js"></script>
     <script src="scripts/weather.js"></script>
     <script src="scripts/clock.js"></script>
     <script src="scripts/prayer.js"></script>

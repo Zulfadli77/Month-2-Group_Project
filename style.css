@@ -171,10 +171,165 @@ h3{
 }
 
 
+/*navigation*/
+.fullnav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #333333;
+  z-index: 100;
+  visibility: hidden;
+  -webkit-transition: opacity .35s, visibility .35s, height .35s;
+  transition: opacity .35s, visibility .35s, height .35s;
+  overflow: hidden;
+}
+
+.hamburger-menu {
+  width: 45px;
+  height: 35px;
+  position: fixed;
+  top: 150px;
+  right: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 500;
+}
+
+.line {
+  width: inherit;
+  height: 5px;
+  background-color: #ff6045;
+  outline: 1px solid #fff;
+  border-radius: 25px;
+  transform-origin: right;
+  transition: transform .5s;
+}
+
+.line-2 {
+  height: 3px;
+}
+
+.change .line-1 {
+  transform: translate(-4px, -4px) rotateZ(-45deg);
+}
+
+.change .line-2 {
+  opacity: 0;
+}
+
+.change .line-3 {
+  transform: translate(-4px, -3px) rotateZ(45deg);
+}
+
+.fullnav.open {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+
+.fullnav.close {
+  opacity: 0;
+  visibility: visible;
+  height: 0%;
+}
+
+.fullnav.open li {
+  -webkit-animation: fadeInRight .5s ease forwards;
+  animation: fadeInRight .5s ease forwards;
+  -webkit-animation-delay: .35s;
+  animation-delay: .35s;
+}
+
+.fullnav.open li:nth-of-type(2) {
+  -webkit-animation-delay: .4s;
+  animation-delay: .4s;
+}
+
+.fullnav.open li:nth-of-type(3) {
+  -webkit-animation-delay: .45s;
+  animation-delay: .45s;
+}
+
+.fullnav.open li:nth-of-type(4) {
+  -webkit-animation-delay: .50s;
+  animation-delay: .50s;
+}
+
+.fullnav nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 7rem;
+  text-align: center;
+}
+
+.fullnav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  height: 100%;
+}
+
+.fullnav ul li {
+  display: block;
+  height: 25%;
+  height: calc(100% / 4);
+  min-height: 50px;
+  position: relative;
+  opacity: 1;
+}
+
+.fullnav ul li a {
+  display: block;
+  position: relative;
+  color: #FFF;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.fullnav ul li a:hover:after,
+.fullnav ul li a:focus:after,
+.fullnav ul li a:active:after {
+  width: 100%;
+}
+
+.fullnav ul li a:hover::before,
+.fullnav ul li a:focus::before,
+.fullnav ul li a:active::before {
+  width: 100%;
+}
+
+.fullnav ul li a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  height: 3px;
+  background: #FFF;
+  -webkit-transition: .35s;
+  transition: .35s;
+}
+
+
 
 /* Prayer Times */
 
-.modal-body{
+.ptModal{
   background-image: url(img/pray.jpg);
   background-position:left bottom;
   background-size:cover;
