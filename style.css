@@ -514,7 +514,8 @@ background-image: url(img/gtBase.png);
   font-size: 20px;
   font-family: 'Roboto', sans-serif;
   font-weight: 600;
-  background-color: #ffffff88;
+  color:#fff;
+  background-color: #00000088; 
 }
 
 
