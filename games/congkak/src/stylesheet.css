@@ -36,13 +36,14 @@ a {
     background-image: url("../img/darkwood.jpg");
     background-size: cover;
     background-repeat: repeat;
-    margin-top: 200px;
-    margin-bottom: 200px;
+    margin: 200px auto;
+    width:1000px;
 }
+
 .storehouse {
-    border-radius: 150px;
-    width: 200px;
-    height: 200px;
+    border-radius: 80px;
+    width: 160px;
+    height: 160px;
     margin-top: 20px;
     display: inline-block;
     overflow: hidden;
@@ -52,41 +53,48 @@ a {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 100px;
     transition: all .3s;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .midgrid {
-    min-width: 900px;
+    min-width: 500px;
+    height:200px;
 }
 .house {
-    border-radius: 50px;
-    width: 100px;
-    height: 100px;
-    margin: 10px;
-    display: inline-block;
+    border-radius: 35px;
+    width: 70px;
+    height: 70px;
+    margin: 30px 5px 0px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
     border: 1px solid red;
     background-color: #fff;
     line-height: 100px;
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 50px;
+    font-size: 40px;
     transition: all .3s;
 }
 
 .p1house {
-    border-radius: 50px;
-    width: 100px;
-    height: 100px;
-    margin: 10px;
-    display: inline-block;
+    border-radius: 35px;
+    width: 70px;
+    height: 70px;
+    margin: 5px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
     border: 1px solid red;
     background-color: #fff;
     line-height: 100px;
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 50px;
+    font-size: 40px;
     transition: all .3s;
 }
-
 
 #gameState {
     color: red;
