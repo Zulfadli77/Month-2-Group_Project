@@ -59,7 +59,7 @@ generateValue('Brunei','brn');
 async function generateValue(nameCaps,iso){
 	//append country name in title	
 	//console.log(nameCaps);
-	document.getElementById('countryName').innerHTML = nameCaps;
+	//document.getElementById('countryName').innerHTML = nameCaps;
 
 	fetch("https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com/api/npm-covid-data/country-report-iso-based/" + nameCaps + "/" + iso + "/",{
 		"method": "GET",
@@ -80,6 +80,7 @@ async function generateValue(nameCaps,iso){
 		document.getElementById('totalDeaths').innerHTML = response[0].TotalDeaths;
 		document.getElementById('newDeaths').innerHTML = response[0].NewDeaths;
 		document.getElementById('totalRecovered').innerHTML = response[0].TotalRecovered;
+		document.getElementById('countryName').innerHTML = nameCaps;
 	})
 
 
