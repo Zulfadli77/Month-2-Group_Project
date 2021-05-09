@@ -25,6 +25,10 @@ h3{
   padding:30px 0px;
 }
 
+.blankSpace{
+  height:120px;
+}
+
 .center{
   display: flex;
   justify-content: center;
@@ -492,35 +496,6 @@ td:nth-child(odd) {
 }
 
 
-/*guling tangan*/
-#gt table{
-  width:800px; 
-}
-
-#gt i{
-  color:#ff6045;
-}
-
-#gtBase{
-background-image: url(img/gtBase.png);
-  background-size: cover;
-  height:133px;
-}
-
-#gt td{
-  background-color: transparent;
-}
-
-#gt img{
-  width: 80px;
-  height:80px;
-  cursor: pointer;
-}
-
-/*gt animation*/
-
-
-
 /*jokes*/
 .api_jokes i{
   color:#ff6045;
@@ -584,10 +559,10 @@ background-image: url(img/gtBase.png);
 
 /*media breakpoint*/
 @media screen and (max-width:1450px){
-  .video iframe{
+  /*.video iframe{
   width:400px;
   height: 225px;
-  }
+  }*/
 }
 
 
@@ -596,34 +571,69 @@ background-image: url(img/gtBase.png);
     display: flex;
     justify-content: center;
   }
-  #heading{
-    display:flex;
-    justify-content: center;
-  }
-  .head{
-    display:flex;
-    width:300px;
-    padding-bottom:20px;
+
+  #logo img{
+    width:350px;
+    height:auto;
   }
 
-  .head90{
-    display:none;
+  #forecast h5{
+    font-size: 17px;
   }
-}
-
-@media screen and (max-width:1000px) {
-  .video iframe{
-  width:280px;
-  height: 157px;
-  }
-}
-
-@media screen and (max-width:800px) {
 
   #forecast{
     display:flex;
     justify-content: center;
   }
+
+  .hamburger-menu{
+    top:50px;
+  }
+
+  .display-clock{
+    font-size:20px;
+  }
+
+  .display-date{
+    font-size:17px;
+  }
+}
+
+@media screen and (max-width:1000px) {
+  /*.video iframe{
+  width:280px;
+  height: 157px;
+  }*/
+
+  .hamburger-menu{
+    top:25px;
+    right:25px;
+  }
+
+  #progressSec p, #quote, #fun{
+    font-size:20px;
+  }
+
+  #author{
+    font-size:24px;
+  }
+
+  .projects img{
+    width:100px;
+    height:auto;
+  }
+
+  .projects li{
+    display:inline-block;
+    padding:20px 20px 0px 0px;
+  }
+
+  .projects h5{
+    font-size:20px;
+  }
+}
+
+@media screen and (max-width:800px) {
 
   #forecast h5{
     font-size: 13px;
@@ -637,12 +647,39 @@ background-image: url(img/gtBase.png);
     font-size: 13px;
   }
 
+  .projects img{
+    width:90px;
+    height:auto;
+  }
+
+  .projects li{
+    display:inline-block;
+    padding:10px 10px 0px 0px;
+  }
+
+  .projects h5{
+    font-size:15px;
+  }
+
+  h3{
+  font-size:30px;
+  }
+
+
 }
 
 @media screen and (max-width:760px) {
+  .blankSpace{
+    height:170px;
+  }
+
+  #covidSec th, #covidSec td{
+    font-size:20px;
+  }
+
   .video iframe{
-  width:400px;
-  height: 225px;
+    width:400px;
+    height: 225px;
   }
 
   .summary, .projects, .qWrapper, .prayer-container{
@@ -656,6 +693,12 @@ background-image: url(img/gtBase.png);
 
   .youtube{
     margin-bottom:30px;
+  }
+}
+
+@media screen and (max-width:650px) {
+  .blankSpace{
+    height:210px;
   }
 }
 
