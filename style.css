@@ -401,6 +401,11 @@ td:nth-child(odd) {
   color:#fff;
 }
 
+.projects h5{
+  padding-top: 3px;
+  font-size:24px;
+}
+
 .projects h3 i{
   color:#ff6045; 
   text-shadow: 0 0 0px #000;
@@ -420,6 +425,15 @@ td:nth-child(odd) {
   height:auto;
   border-radius:10px;
   margin-top:10px;
+}
+
+.projects li{
+  display:inline-block;
+  padding:30px 30px 0px 0px;
+}
+
+.projects ul{
+  padding:0px;
 }
 
 /*quote*/
@@ -469,6 +483,7 @@ td:nth-child(odd) {
 
 #covidSec table{
   margin-top:10px;
+  font-size: 24px;
 }
 
 #covidSec th{

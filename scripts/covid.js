@@ -85,5 +85,6 @@ async function generateValue(nameCaps,iso){
 
 	.catch(err => {
 		console.error(err);
+		alert("invalid input");
 	});
 }	
