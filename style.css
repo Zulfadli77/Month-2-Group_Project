@@ -183,7 +183,7 @@ h3{
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #333333;
+  background-color: rgba(0,0,0,0.97);
   z-index: 100;
   visibility: hidden;
   -webkit-transition: opacity .35s, visibility .35s, height .35s;
@@ -299,7 +299,7 @@ h3{
 .fullnav ul li a {
   display: block;
   position: relative;
-  color: #FFF;
+  color: #ff6045;
   text-decoration: none;
   overflow: hidden;
 }
