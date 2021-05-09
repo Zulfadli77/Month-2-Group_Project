@@ -43,6 +43,7 @@ h3{
   background-size: cover;
   background-attachment: fixed;
   color: #fff;
+  border-bottom:30px solid #ff6045;
 }
 
 .para2 {
@@ -548,6 +549,7 @@ background-image: url(img/gtBase.png);
 
 .youtube h3{
   color:#fff;
+  margin-top: 50px;
 }
 
 .video{
