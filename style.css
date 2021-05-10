@@ -717,9 +717,14 @@ td:nth-child(odd) {
   }
 }
 
-@media screen and (max-width:400px){
+@media screen and (max-width:430px){
   .video iframe{
   width:250px;
   height: 140px;
+  }
+
+  .hamburger-menu{
+    top:90px;
+    right:25px;
   }
 }
